@@ -40,7 +40,7 @@ import { Register } from './pages/register';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <RefineKbarProvider>
         <ColorModeContextProvider>
           <AntdApp>
