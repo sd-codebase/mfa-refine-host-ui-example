@@ -37,6 +37,7 @@ import {
 import { ForgotPassword } from './pages/forgotPassword';
 import { Login } from './pages/login';
 import { Register } from './pages/register';
+import UsersList from 'remoteApp/UsersList';
 
 function App() {
   return (
@@ -67,6 +68,13 @@ function App() {
                     create: '/categories/create',
                     edit: '/categories/edit/:id',
                     show: '/categories/show/:id',
+                    meta: {
+                      canDelete: true,
+                    },
+                  },
+                  {
+                    name: 'users',
+                    list: '/users',
                     meta: {
                       canDelete: true,
                     },
@@ -136,6 +144,10 @@ function App() {
                         element={<CategoryShow />}
                       />
                     </Route>
+                    <Route
+                      path="/users"
+                      element={<UsersList />}
+                    />
                     <Route
                       path="*"
                       element={<ErrorComponent />}
