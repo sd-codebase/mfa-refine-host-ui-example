@@ -14,7 +14,20 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@remote/*": ["src/*"],
+      "@remote/components/*": ["src/components/*"],
+      "@remote/pages/*": ["src/pages/*"],
+      "@remote/styles/*": ["src/styles/*"],
+      "@remote/types/*": ["src/types/*"]
+    }
   },
   "include": ["src"],
   "references": [

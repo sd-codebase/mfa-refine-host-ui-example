@@ -16,7 +16,8 @@
     "antd": "^5.17.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-router": "^7.0.2"
+    "react-router": "^7.0.2",
+    "sass": "^1.71.1"
   },
   "devDependencies": {
     "@types/node": "^18.16.2",
@@ -28,18 +29,18 @@
     "eslint": "^8.38.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
-    "gh-pages": "^6.3.0",
     "typescript": "^5.4.2",
-    "vite": "^4.3.1"
+    "vite": "^4.3.1",
+    "typescript-plugin-css-modules": "^5.0.1",
+    "husky": "^8.0.0"
   },
-  "homepage": "https://sd-codebase.github.io/mfa-refine-host-ui-example",
   "scripts": {
     "dev": "refine dev",
     "build": "tsc && refine build",
     "start": "refine start",
     "refine": "refine",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "prepare": "husky install",
+    "build:pre-commit": "vite build"
   },
   "browserslist": {
     "production": [
